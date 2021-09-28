@@ -40,3 +40,79 @@ const employees = [
 // Ask questions when you don't.
 
 console.log( employees );
+
+function bonusCalc(employeesList) {
+  
+let results = [];
+
+  for (let employee of employees) {
+
+    let rating = employee.reviewRating;
+    let employeeNumber = employee.employeeNumber;
+    let bonusPercentage = 0;
+    let totalBonus = 0;
+    let totalCompensation = 0;
+    let annualIncome = Number(employee.annualSalary);
+
+
+    if (rating === 3){
+      bonusPercentage = 0.04;
+    }
+
+    if (rating === 4){
+      bonusPercentage = 0.06;
+    }
+
+    if (rating === 5){
+      bonusPercentage = 0.1;
+    }
+
+    if (employeeNumber.length >= 4) {
+      bonusPercentage += 0.05;
+    }
+
+    if (annualIncome > 65000){
+      bonusPercentage -= 0.01;
+    }
+
+    if (bonusPercentage <= 0){
+      bonusPercentage = 0;
+    }
+
+    if (bonusPercentage > 0.13){
+      bonusPercentage = 0.13;
+    }
+
+    // we interpret bullet point 1 under the individual bonus calc as 
+    // meaning that an employee that has a rating less than 3 should
+    // get no bonus at all.
+    if (employee.reviewRating <= 2){
+      bonusPercentage = 0;
+    } // end if no bonus
+
+
+    totalBonus = annualIncome * bonusPercentage;
+    totalCompensation = annualIncome + totalBonus;
+
+    let newObj = {
+      name: employee.name,
+      bonusPercentage: bonusPercentage,
+      totalCompensation: totalCompensation,
+      totalBonus: Math.round(String(totalBonus))
+    }
+
+    results.push(newObj);
+    
+    //console.log(`bonus percentage: ${bonusPercentage}, total bonus: ${totalBonus}, total comp: ${totalCompensation}`);
+  }
+  return results;
+} 
+
+console.log(bonusCalc(employees));
+
+
+
+
+
+
+
