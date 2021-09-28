@@ -5,14 +5,24 @@
     <title>Bonus Calculator Object Challenge</title>
     <script src="jquery-3.6.0.min.js"></script>
     <script src="client.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <h1>Bonus Calculator Object Challenge</h1>
 
     <button id="displayButton">Click to calculate</button>
-    <h2>Employee Bonuses: </h2>
-    <ul id="displayList">
 
+    <h2 id="listHeaders">Employee Bonuses: </h2>
+
+    
+    <!-- appended list -->
+    <ul id="displayList">
+      <li>
+        <span class="name">NAME</span>
+        <span class="bonusPercentage">BONUS %</span>
+        <span class="totalCompensation">TOTAL COMP</span>
+        <span class="totalBonus">TOTAL BONUS</span>
+      </li>
     </ul>
   </body>
 </html>

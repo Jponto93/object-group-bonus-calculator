@@ -120,9 +120,11 @@ function readyNow() {
 
   function displayListOnDom() {
     console.log('in displayListOnDom');
+    // display list headers
+  
     // display bonusDisplay on the DOM
     for (let employee of bonusDisplay) {
-      $("#displayList").append(`<li class="bonusList"><span class="name">Name: ${employee.name}</span><span class="bonusPercentage">Bonus Percentage: ${employee.bonusPercentage}</span><span class="totalCompensation">Total Compensation: ${employee.totalCompensation}</span><span class="totalBonus">Total Bonus: ${employee.totalBonus}<span></li>`);
+      $("#displayList").append(`<li class="bonusList"><span class="name">${employee.name}</span><span class="bonusPercentage"> ${employee.bonusPercentage}</span><span class="totalCompensation"> ${employee.totalCompensation}</span><span class="totalBonus"> ${employee.totalBonus}<span></li>`);
     }
   } // end displayListOnDom
 
