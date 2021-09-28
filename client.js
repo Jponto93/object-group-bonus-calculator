@@ -48,8 +48,6 @@ function readyNow() {
 
   console.log(employees);
 
-  const bonusDisplay = bonusCalc(employees);
-
   function bonusCalc(employeesList) {
 
     let results = [];
@@ -120,8 +118,8 @@ function readyNow() {
 
   function displayListOnDom() {
     console.log('in displayListOnDom');
-    // display list headers
-  
+    // run bonusCalc
+    const bonusDisplay = bonusCalc(employees);
     // display bonusDisplay on the DOM
     for (let employee of bonusDisplay) {
       $("#displayList").append(`<li class="bonusList"><span class="name">${employee.name}</span><span class="bonusPercentage"> ${employee.bonusPercentage}</span><span class="totalCompensation"> ${employee.totalCompensation}</span><span class="totalBonus"> ${employee.totalBonus}<span></li>`);
