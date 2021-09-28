@@ -1,5 +1,13 @@
-#listHeaders {
+body {
+    text-align: center;
+    background-color: #FF5E5B;
+}
 
+
+#listHeaders {
+    /* border-bottom: black;
+    border-width: 5px;
+    border-style: solid; */
 }
 
 ul {
@@ -7,6 +15,9 @@ ul {
     display: flex;
     flex-direction: column;
     text-align: center;
+    margin: auto;
+    padding: 0;
+    width: 80%;
     
 }
 
@@ -18,15 +29,17 @@ li {
 .name {
     /* width: 80px; */
     /* padding-right: 50px; */
-    width: 20%;
+    width: 25%;
     padding: 10px;
+    background-color: #D8D8D8;
 
 }
 
 .bonusPercentage {
     /* width: 20%; */
     padding: 10px;
-    width: 20%;
+    width: 25%;
+    background-color: #FFFFEA;
 
 
 }
@@ -34,7 +47,8 @@ li {
 .totalCompensation {
     /* width: 20%; */
     padding: 10px;
-    width: 20%;
+    width: 25%;
+    background-color: #D8D8D8;
 
 
 }
@@ -42,7 +56,8 @@ li {
 .totalBonus {
     /* width: 20%; */
     padding: 10px;
-    width: 20%;
+    width: 25%;
+    background-color: #FFFFEA;
 
 
 }
